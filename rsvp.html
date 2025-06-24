@@ -1,37 +1,48 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSVP – Melanie & Sebastian</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RSVP – Melanie & Sebastian</title>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <main>
-        <h1>Wir freuen uns, euch zu sehen!</h1>
-        <p>Wir bitten bis zum 15. September 2025 um Rückantwort</p>
-        <form action="https://formspree.io/f/yourformid" method="POST">
-            <label>Vorname <input type="text" name="Vorname" required></label>
-            <label>Nachname <input type="text" name="Nachname" required></label>
-            <label>Kommt du?
-                <input type="radio" name="Kommt" value="Ja" required> Ja
-                <input type="radio" name="Kommt" value="Nein"> Nein
-            </label>
-            <label>Essen
-                <select name="Essen" required>
-                    <option value="">Bitte wählen</option>
-                    <option value="Vegetarische Lasagne">Vegetarische Lasagne</option>
-                    <option value="Butter Curry mit Gemüse an Reis">Butter Curry mit Gemüse an Reis</option>
-                    <option value="Ravioli mit Pesto-Sahne-Sauce">Ravioli mit Pesto-Sahne-Sauce</option>
-                </select>
-            </label>
-            <label>Sollten wir auf etwas besonders achten?
-                <textarea name="Anmerkungen" rows="4"></textarea>
-            </label>
-            <button type="submit">Absenden</button>
-            <a class="button" href="index.html">Zurück</a>
-        </form>
-    </main>
+
+  <header class="hero rsvp-header">
+    <!-- image path unchanged -->
+    <img src="wedding-photo.png" alt="Melanie und Sebastian" />
+    <h1>Wir freuen uns, euch zu sehen!</h1>
+    <p>Wir bitten bis zum 15.&nbsp;September 2025 um Rückantwort</p>
+  </header>
+
+  <main class="rsvp-page">
+    <!-- keep your original endpoint here -->
+    <form class="rsvp-form" action="YOUR_EXISTING_ACTION_URL" method="POST">
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="food">Essen</label>
+      <select id="food" name="food" required>
+        <option value="" selected>Bitte wählen …</option>
+        <option>Vegetarische Lasagne</option>
+        <option>Butter Curry mit Gemüse an Reis</option>
+        <option>Ravioli mit Pesto-Sahne-Sauce</option>
+      </select>
+
+      <label for="message">Sollten wir auf etwas besonders achten?</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <div class="btn-container">
+        <button type="submit" class="btn">Absenden</button>
+      </div>
+    </form>
+
+    <div class="btn-container">
+      <a href="index.html" class="btn btn-back">Zurück</a>
+    </div>
+  </main>
+
 </body>
 </html>
