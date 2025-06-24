@@ -22,7 +22,7 @@ body{
 .hero img{
   /* 40 % kleiner –> 60 % Original */
   width:60%;
-  max-width:600px;
+  max-width:400px;
   height:auto;
   display:block;
   margin:0 auto 1rem;
