@@ -1,54 +1,117 @@
+/* ───────────────────────────────────────────
+   BASE
+   ─────────────────────────────────────────── */
+*,
+*::before,
+*::after { box-sizing:border-box; }
 
-body {
-    font-family: sans-serif;
-    background: #f5f2ea;
-    color: #111;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+body{
+  margin:0;
+  font-family:system-ui, Arial, sans-serif;
+  line-height:1.55;
+  color:#333;
 }
-main {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
+
+/* ───────────────────────────────────────────
+   HERO
+   ─────────────────────────────────────────── */
+.hero{
+  text-align:center;
+  padding:1.5rem 1rem 2.5rem;
 }
-h1, h2, h3 {
-    text-align: center;
+.hero img{
+  /* 40 % kleiner –> 60 % Original */
+  width:60%;
+  max-width:600px;
+  height:auto;
+  display:block;
+  margin:0 auto 1rem;
 }
-.hero {
-    width: 100%;
-    max-width: 700px;
-    display: block;
-    margin: 1rem auto;
+.hero h1{margin:0 0 .25rem;font-size:2.2rem;}
+.hero h2{margin:0 0 1rem;font-size:1.3rem;font-weight:normal;}
+
+/* ───────────────────────────────────────────
+   TWO-COLUMN INFO BLOCK
+   ─────────────────────────────────────────── */
+.info-columns{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:flex-start; /* h3 + p bündig */
+  gap:2rem;
+  padding:2rem 1rem;
 }
-.details {
-    display: flex;
-    justify-content: space-between;
-    margin: 2rem 0;
+.info-columns .col{
+  flex:1 1 300px;
 }
-.details div {
-    width: 45%;
+.info-columns h3{
+  margin:0 0 .5rem;
+  font-size:1.25rem;
 }
-.button, button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border: 2px solid #000;
-    background: none;
-    text-decoration: none;
-    color: #000;
-    margin-top: 1rem;
-    cursor: pointer;
+
+/* ───────────────────────────────────────────
+   RSVP INVITE ON HOME PAGE
+   ─────────────────────────────────────────── */
+.rsvp-invite{
+  text-align:center;
+  padding:2rem 1rem 3rem;
 }
-form {
-    display: flex;
-    flex-direction: column;
+
+/* ───────────────────────────────────────────
+   BUTTONS
+   ─────────────────────────────────────────── */
+.btn{
+  display:inline-block;
+  padding:.9rem 2rem;
+  margin-top:1.25rem;
+  background:#333;
+  color:#fff;
+  text-decoration:none;
+  border-radius:4px;
+  transition:opacity .25s;
 }
-label {
-    margin: 1rem 0;
+.btn:hover,
+.btn:focus{opacity:.85;}
+/* back-link variant */
+.btn-back{background:#666;}
+
+/* ───────────────────────────────────────────
+   RSVP PAGE
+   ─────────────────────────────────────────── */
+.rsvp-page{
+  max-width:500px;
+  margin:0 auto;
+  padding:2rem 1rem 3rem;
 }
-footer {
-    margin-top: 4rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #666;
+
+.rsvp-form label{
+  display:block;
+  margin-top:1rem;
+}
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea{
+  width:100%;
+  padding:.55rem .6rem;
+  margin-top:.35rem;
+  border:1px solid #ccc;
+  border-radius:4px;
+  font-size:1rem;
+}
+.rsvp-form textarea{resize:vertical;}
+
+.btn-container{text-align:center;}
+
+.rsvp-page .btn{
+  /* smaller on RSVP page */
+  padding:.6rem 1.5rem;
+}
+
+/* ───────────────────────────────────────────
+   FOOTER
+   ─────────────────────────────────────────── */
+footer{
+  text-align:center;
+  padding:1rem 1rem 2rem;
+  font-size:.95rem;
 }
