@@ -33,18 +33,22 @@ body{
 /* ───────────────────────────────────────────
    TWO-COLUMN INFO BLOCK
    ─────────────────────────────────────────── */
+/* INFORMATION BLOCK – centering + tighter gap */
 .info-columns{
   display:flex;
   flex-wrap:wrap;
-  justify-content:center;
-  align-items:flex-start; /* h3 + p bündig */
-  gap:2rem;
-  padding:2rem 1rem;
+  justify-content:center;   /* keeps them centred */
+  align-items:flex-start;
+  gap:1.2rem;               /* smaller distance between columns */
+  max-width:780px;          /* centres the whole block */
+  margin:0 auto 2rem;       /* …by giving it automatic side-margins */
 }
-.info-columns .col {
-  flex: 1 1 300px;
-  text-align: center; /* ⬅️ centers both <h3> and <p> */
+
+.info-columns .col{
+  flex:0 1 280px;           /* fixed-ish width, prevents stretching */
+  text-align:center;        /* headline + text remain centred */
 }
+
 .info-columns h3{
   margin:0 0 .5rem;
   font-size:1.25rem;
