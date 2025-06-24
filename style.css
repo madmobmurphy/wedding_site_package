@@ -39,7 +39,7 @@ body{
   flex-wrap:wrap;
   justify-content:center;   /* keeps them centred */
   align-items:flex-start;
-  gap:1.2rem;               /* smaller distance between columns */
+  gap:0.6rem;               /* smaller distance between columns */
   max-width:780px;          /* centres the whole block */
   margin:0 auto 2rem;       /* …by giving it automatic side-margins */
 }
