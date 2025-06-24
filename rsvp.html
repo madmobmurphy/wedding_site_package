@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP – Melanie & Sebastian</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Wir freuen uns, euch zu sehen!</h1>
+        <p>Wir bitten bis zum 15. August 2025 um Rückantwort</p>
+        <form action="https://formspree.io/f/yourformid" method="POST">
+            <label>Vorname <input type="text" name="Vorname" required></label>
+            <label>Nachname <input type="text" name="Nachname" required></label>
+            <label>Kommt du?
+                <input type="radio" name="Kommt" value="Ja" required> Ja
+                <input type="radio" name="Kommt" value="Nein"> Nein
+            </label>
+            <label>Essen
+                <select name="Essen" required>
+                    <option value="">Bitte wählen</option>
+                    <option value="Fleisch">Fleisch</option>
+                    <option value="Vegetarisch">Vegetarisch</option>
+                    <option value="Vegan">Vegan</option>
+                </select>
+            </label>
+            <label>Sollten wir auf etwas besonders achten?
+                <textarea name="Anmerkungen" rows="4"></textarea>
+            </label>
+            <button type="submit">Absenden</button>
+            <a class="button" href="index.html">Zurück</a>
+        </form>
+    </main>
+</body>
+</html>
