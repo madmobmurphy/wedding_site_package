@@ -21,7 +21,7 @@ body{
 }
 .hero img{
   /* 40 % kleiner –> 60 % Original */
-  width:65%;
+  width:75%;
   max-width:600px;
   height:auto;
   display:block;
