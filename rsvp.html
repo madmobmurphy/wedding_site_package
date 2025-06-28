@@ -13,25 +13,33 @@
     <!-- image path unchanged -->
     <img src="wedding-photo.png" alt="Melanie und Sebastian" />
     <h1>Wir freuen uns, euch zu sehen!</h1>
-    <p>Wir bitten bis zum 15.&nbsp;September 2025 um Rückantwort</p>
+    <p>Wir bitten bis zum 15. September 2025 um Rückantwort</p>
   </header>
 
   <main class="rsvp-page">
     <!-- keep your original endpoint here -->
-    <form class="rsvp-form" action="YOUR_EXISTING_ACTION_URL" method="POST">
+    <form class="rsvp-form" action="https://formspree.io/f/xanjaklz" method="POST">
 
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required />
 
+      <label>Wirst du mit uns feiern?
+        <select name="attendance" required>
+          <option value="" disabled selected>Please choose…</option>
+          <option>Ja</option>
+          <option>Nein</option>
+        </select>
+      </label>
+      
       <label for="food">Essen</label>
       <select id="food" name="food" required>
         <option value="" selected>Bitte wählen …</option>
         <option>Vegetarische Lasagne</option>
         <option>Butter Curry mit Gemüse an Reis</option>
-        <option>Ravioli mit Pesto-Sahne-Sauce</option>
+        <option>Ravioli an Pesto-Sahne-Sauce</option>
       </select>
 
-      <label for="message">Sollten wir auf etwas besonders achten?</label>
+      <label for="message">Sollte es Allergien geben auf die wir achtgeben sollten, dann lass es uns bitte wissen.</label>
       <textarea id="message" name="message" rows="4"></textarea>
 
       <div class="btn-container">
